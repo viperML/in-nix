@@ -1,0 +1,4 @@
+*result*
+/.direnv
+build
+compile_commands.json
