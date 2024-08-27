@@ -21,9 +21,8 @@ lib.fix (self:
 
       passthru.patchNix = nix:
         nix.overrideAttrs (old: {
-          # Any phase that runs after tests
-          postInstall =
-            (old.postInstall or "")
+          postInstallCheck =
+            (old.postInstallCheck or "")
             + ''
               patchelf --add-needed libin-nix.so $out/bin/nix
               patchelf --set-rpath "$(patchelf --print-rpath $out/bin/nix):${self}/lib" $out/bin/nix
