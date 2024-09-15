@@ -10,5 +10,5 @@ See https://github.com/NixOS/nix/issues/3862
 ## Usage
 
 ```
-inputs.in-nix.packages.x86_64-linux.patchNix <your nix package>
+inputs.in-nix.packages.x86_64-linux.default.patchNix <your nix package>
 ```
